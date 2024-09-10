@@ -15,7 +15,7 @@ use crate::{
 ///
 /// It takes as input the secret key `sk` and a ciphertext `c`.
 /// It returns an error vector in `e` and the return value indicates success (0) or failure (1)
-pub(crate) fn decrypt(
+pub fn decrypt(
     e: &mut [u8; SYS_N / 8],
     sk: &[u8; IRR_BYTES + COND_BYTES],
     c: &[u8; SYND_BYTES],

@@ -5,7 +5,7 @@ use crate::params::SYS_T;
 
 /// Take element `f` in `GF((2^m)^t)` and return minimal polynomial `out` of `f`
 /// Returns 0 for success and -1 for failure
-pub(crate) fn genpoly_gen(out: &mut [Gf; SYS_T], f: &[Gf; SYS_T]) -> isize {
+pub fn genpoly_gen(out: &mut [Gf; SYS_T], f: &[Gf; SYS_T]) -> isize {
     let mut mat = [[0u16; SYS_T]; SYS_T + 1];
     mat[0][0] = 1;
 

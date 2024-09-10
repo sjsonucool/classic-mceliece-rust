@@ -193,7 +193,7 @@ fn mov_columns(
 /// `pk` has `max(1 << GFBITS, SYS_N)` elements which is
 /// 4096 for mceliece348864 and 8192 for mceliece8192128.
 /// `sk` has `2 * SYS_T` elements and perm `1 << GFBITS`.
-pub(crate) fn pk_gen(
+pub fn pk_gen(
     pk: &mut [u8; PK_NROWS * PK_ROW_BYTES],
     sk: &[u8; 2 * SYS_T],
     perm: &[u32; 1 << GFBITS],

@@ -219,7 +219,7 @@ fn syndrome(
 
 /// Encryption routine.
 /// Takes a public key `pk` to compute error vector `e` and syndrome `s`.
-pub(crate) fn encrypt<R: CryptoRng + RngCore>(
+pub fn encrypt<R: CryptoRng + RngCore>(
     s: &mut [u8; CRYPTO_CIPHERTEXTBYTES],
     pk: &[u8; PK_NROWS * PK_ROW_BYTES],
     e: &mut [u8; SYS_N / 8],
