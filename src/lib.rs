@@ -3,7 +3,7 @@
 #![forbid(unsafe_code)]
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
-mod api;
+pub mod api;
 mod benes;
 mod bm;
 mod controlbits;
@@ -13,7 +13,7 @@ pub mod encrypt;
 mod gf;
 mod int32_sort;
 mod operations;
-mod params;
+pub mod params;
 pub mod pk_gen;
 mod root;
 pub mod sk_gen;
