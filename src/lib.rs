@@ -46,7 +46,7 @@ pub use api::{
     CRYPTO_SECRETKEYBYTES,
 };
 
-mod macros {
+pub mod macros {
     /// This macro(A, B, C, T) allows to get “&A[B..B+C]” of type “&[T]” as type “&[T; C]”.
     /// The default type T is u8 and “mut A” instead of “A” returns a mutable reference.
     macro_rules! sub {
@@ -68,7 +68,7 @@ mod macros {
         }};
     }
 
-    pub(crate) use sub;
+    pub use sub;
 }
 
 #[derive(Debug)]
