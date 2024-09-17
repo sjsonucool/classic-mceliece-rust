@@ -49,6 +49,7 @@ pub use api::{
 pub mod macros {
     /// This macro(A, B, C, T) allows to get “&A[B..B+C]” of type “&[T]” as type “&[T; C]”.
     /// The default type T is u8 and “mut A” instead of “A” returns a mutable reference.
+    #[macro_export]
     macro_rules! sub {
         ($var:expr, $offset:expr, $len:expr) => {{
             <&[u8; $len]>::try_from(&$var[$offset..($offset + $len)])
